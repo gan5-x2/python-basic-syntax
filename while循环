@@ -1,0 +1,25 @@
+i=0
+import time
+#break中断整个循环
+while True:
+    i+=1
+    print("while 测试")
+    #休眠0.5秒
+    time.sleep(0.5)
+    if i==10:
+        print("循环到这里中断了")
+        break
+
+#continue
+print(f"100以内能被3整除的数有")
+j=0
+for i in range(1,101):
+    j+=1
+    if j % 10 == 0:
+        print("")
+    if i%3!=0:
+        continue
+    # 不换行输出
+    print(i, end=' ')
+print("运行结束")
+

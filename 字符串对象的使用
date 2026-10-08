@@ -1,0 +1,45 @@
+#大小写转换
+str="pYthon"
+#capitalize()首字母大写，其余全部小写
+print(str.capitalize())
+#upper()全部大写
+print(str.upper())
+#lower()全部小写
+print(str.lower())
+
+#判断字符的组成结构，返回值就是两种，True,False
+print("abc?123".isalpha())
+print("abc?123".isdigit())
+print("abcefg".isalpha())
+print("123456789".isdigit())
+
+#判断用户输入是否正确
+name = input("请输入你的用户名：用户名由字母和数字组成 ")
+while True:
+    if name.isalnum():
+        print("你的输入是正确的，通过检查")
+        break
+    else:
+        print("你的输入不正确的，不通过检查")
+        name = input("请重新输入：")
+
+import string
+#随机生成10位包含大小写英文字母+数字+特殊字符
+import string
+import random
+
+# 字符池
+# string.ascii_letters → 大小写英文字母 a-z A-Z
+# string.digits → 数字 0~9
+# string.punctuation → 所有特殊符号 !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
+char_pool = string.ascii_letters + string.digits + string.punctuation
+
+# 循环10次，每次随机选一个字符，拼接成字符串
+password = ''.join(random.choice(char_pool) for i in range(10))
+
+print("生成的10位密码：", password)
+
+
+
+
+
